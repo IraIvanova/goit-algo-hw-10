@@ -1,7 +1,7 @@
 def find_coins_greedy(coins: list, amount: int):
     coins_to_be_used = {}
 
-    for coin in coins:
+    for coin in sorted(coins, reverse=True):
         count = amount // coin
         if count > 0:
             coins_to_be_used[coin] = count
